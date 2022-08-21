@@ -1,0 +1,28 @@
+{
+  "name": "cypressdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "cypress:open": "cypress open",
+    "headTest": "npm run test -- --headed",
+    "chromeTest": "npm run test -- --browser chrome",
+    "recordDashboardTest": "npm run test --record --key 48bd1210-7ded-4a0a-920b-dbc0940cc9ed --reporter mochawesome",
+    "MobileKartTest": "npm run test -- --spec \"cypress//integration//MobileKart/*\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.6.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-iframe": "^1.0.1",
+    "index": "^0.4.0",
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/e2e/"
+  }
+}
